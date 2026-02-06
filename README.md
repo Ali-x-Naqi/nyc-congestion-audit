@@ -1,53 +1,52 @@
-# NYC Congestion Pricing Audit 2025
+# NYC Congestion Pricing Audit 🚖
 
-Analysis of the Manhattan Congestion Relief Zone toll impact on NYC taxi industry.
+**Assignment 01 - Section [SEC] - Roll [ROLL]**
 
-## Setup
+A data science pipeline and dashboard analyzing the impact of NYC's 2025 Congestion Pricing implementation on the taxi industry, traffic flow, and revenue.
 
+## 📊 Features
+- **Big Data Processing**: Handles 100M+ rows efficiently using DuckDB
+- **Automated Ingestion**: Web scraper for TLC parquet files (PowerShell-based)
+- **Ghost Trip Detection**: Filters fraudulent trips (impossible speed, teleporters)
+- **Zone Analysis**: Geospatial analysis of congestion zone compliance
+- **Weather Impact**: Correlates demand with precipitation data
+- **Interactive Dashboard**: 4-tab Streamlit app for visual audit
+
+## 🚀 Quick Start
+
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run Pipeline
-
+### 2. Run Pipeline (ETL)
+Downloads data, processes it, and generates aggregations:
 ```bash
 python pipeline.py
 ```
 
-## Run Dashboard
-
+### 3. Launch Dashboard
+Opens the interactive report in your browser:
 ```bash
 streamlit run dashboard/app.py
 ```
 
-## Structure
-
+## 📁 Project Structure
 ```
 DS_ASS_01/
-├── pipeline.py           # Main ETL and analysis
-├── config/
-│   ├── settings.py       # Configuration
-│   └── zones.py          # Zone mappings
-├── src/
-│   ├── scraper.py        # Web scraping
-│   ├── schema.py         # Schema unification
-│   ├── ghost_filter.py   # Ghost trip detection
-│   ├── zone_analysis.py  # Zone analytics
-│   ├── weather.py        # Weather API
-│   └── aggregations.py   # DuckDB aggregations
-├── dashboard/
-│   └── app.py            # Streamlit dashboard
-├── data/
-│   ├── raw/              # Downloaded data
-│   ├── processed/        # Aggregated data
-│   └── audit_log/        # Ghost trips
-└── outputs/              # Reports
+├── pipeline.py          # Main ETL orchestrator
+├── dashboard/           # Streamlit app code
+├── src/                 # Modular logic (scraper, ghost filter, etc.)
+├── config/              # Configuration (zones, settings)
+├── data/                # Data directories (raw, processed, audit_log)
+└── outputs/             # Generated reports (PDF/Markdown, JSON)
 ```
 
-## Technical Stack
-
-- **DuckDB**: Big data processing
-- **Streamlit**: Interactive dashboard
-- **Folium**: Geospatial mapping
-- **Plotly**: Visualizations
-- **Open-Meteo API**: Weather data
+## 📋 Requirements Fulfilled
+- [x] Automated Web Scraping
+- [x] Modular Pipeline (.py scripts)
+- [x] Big Data Stack (DuckDB)
+- [x] Ghost Trip Detection
+- [x] December 2025 Imputation
+- [x] Rain Elasticity Analysis
+- [x] Streamlit Dashboard
