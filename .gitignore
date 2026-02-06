@@ -1,0 +1,38 @@
+# Data files (too large for GitHub)
+data/raw/*.parquet
+data/raw/*.zip
+data/audit_log/*.parquet
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.eggs/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# Keep processed data (small aggregations)
+!data/processed/*.csv
