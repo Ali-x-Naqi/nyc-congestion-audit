@@ -343,3 +343,9 @@ if __name__ == "__main__":
     missing = get_missing_months(2025)
     print(f"Yellow: {missing['yellow']}")
     print(f"Green: {missing['green']}")
+    
+    if missing['yellow'] or missing['green']:
+        print("\n⚠️ Missing files detected! Starting auto-download...")
+        download_all_data(years=[2025], include_comparison=[2024])
+    else:
+        print("\n✅ All data is up to date!")
