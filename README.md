@@ -1,6 +1,6 @@
 # NYC Congestion Pricing Audit 🚖
 
-**Assignment 01 - Section [SEC] - Roll [ROLL]**
+**Assignment 01 - Section SE-6B - Roll 23F-3052**
 
 A data science pipeline and dashboard analyzing the impact of NYC's 2025 Congestion Pricing implementation on the taxi industry, traffic flow, and revenue.
 
